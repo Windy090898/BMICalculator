@@ -33,36 +33,32 @@ height.oninput = weight.oninput = checkInput;
 
 // When click button
 var calBtn = document.querySelector('.btn-boost');
-
+var outputText = document.getElementById('output');
+var outputImg = document.getElementById('outputIMG');
 
 calBtn.onclick = checkBMI;
 
 function checkBMI() {
 
     var bmi = (weight.value * 10000 / (height.value * height.value)).toFixed(2) ;
-    var outputText = document.getElementById('output');
-    var outputImg = document.getElementById('outputIMG');
 
     // Check BMI with condition => give result with img change
     if (bmi < 18.5 && bmi > 0) {
-        outputText.innerHTML = "Under weight: " + bmi;
-        outputImg.src = "./img/body-1.png";
+        showResult("Under weight", "./img/body-1.png", bmi)
     } else if (bmi < 24) {
-        outputText.innerHTML = "Normal: " + bmi;
-        outputImg.src = "./img/body-2.png";
+        showResult("Normal", "./img/body-2.png", bmi)
     } else if (bmi < 30) {
-        outputText.innerHTML = "Over weight: " + bmi;
-        outputImg.src = "./img/body-3.png";
+        showResult("Over weight", "./img/body-3.png", bmi)
     } else if (bmi < 35) {
-        outputText.innerHTML = "Severe obesity: " + bmi;
-        outputImg.src = "./img/body-4.png";
+        showResult("Severe obesity", "./img/body-4.png", bmi)
     } else if (bmi < 40) {
-        outputText.innerHTML = "Morbid obesity : " + bmi;
-        outputImg.src = "./img/body-5.png";
+        showResult("Mobrid obesity", "./img/body-5.png", bmi)
     } else {
-        outputText.innerHTML = "Super obesity : " + bmi;
-        outputImg.src = "./img/body-6.png";
+        showResult("Super obesity", "./img/body-6.png", bmi)
     }
+}
 
-    console.log(outputText)
+function showResult(text, src, bmi) {
+    outputText.innerHTML = text +": " + bmi;
+    outputImg.src = src;
 }
