@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uyen</title>
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+          <div class="glass-rect">
+           
+            <div class="main">
+              <h2 class="main-title">
+                Calculate your BMI
+              </h2>
+              <p class="main-desc">
+                Body Mass Index (BMI) is calculated using your height and weight and is approximately related to body fat percentage.
+              </p>
+            
+              <form>
+                <input type="text" id="height" placeholder="Height in CM">
+                <span id="heightError" class="error"></span>
+                <input type="text" id="weight" placeholder="Weight in KG">
+                <span id="weightError" class="error"></span>
+                <button type="button" class="btn-boost" id="cal">Calculate</button>
+              </form>
+              </a>
+            </div>
+            <div class="img-wrapper">
+
+              <div id="result">
+
+                  <img id="outputIMG" src="./img/undraw_personal_training_0dqn.svg" class="feat-img animate__zoomIn animate__animated" />
+                  <p id="output" class="main-desc animate__zoomIn animate__animated"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+
+        <script src="./main.js"></script>
+</body>
+
+</html>
